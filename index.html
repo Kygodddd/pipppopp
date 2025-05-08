@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pip Pop</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+       body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #f2e2a7;
+        overflow: hidden;
+      }
+      #container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #top-bar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        gap: 10px;
+      }
+      .circle-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+      #status-box {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        text-align: right;
+      }
+      
+  </style>
+</head>
+<body>
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <!-- Container High Score dan Koin -->
+    <div id="score-container">
+      <p>High Score: <span id="high-score">0</span></p>
+      <p>Koin: <span id="coin-count">0</span></p>
+    </div>
+
+    <!-- Tombol Gacha -->
+    <button id="gacha-btn">🌀 Gacha</button>
+
+    <!-- Hasil Gacha -->
+    <div id="gacha-result"></div>
+
+    <!-- Karakter utama -->
+    <div class="wrapper">
+      <h2 id="click-count">0</h2>
+      <img id="image" src="./image/kucing_tutup.png" alt="Kucing" />
+     
+    </div>
+
+    <!-- Tombol untuk melihat daftar karakter -->
+    <button id="toggleButton">📜 List Karakter</button>
+
+    <section class="character-list" id="characterList" style="display: none">
+      <div class="character">
+        <img src="./image/anjing_tutup.png" alt="Anjing" />
+        <p>Karakter 1</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/hamster_tutup.png" alt="Hamster" />
+        <p>Karakter 2</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/kucing_tutup.png" alt="Kucing" />
+        <p>Karakter 3</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/lebah_tutup.png" alt="Lebah" />
+        <p>Karakter 4</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/marmut_tutup.png" alt="Marmut" />
+        <p>Karakter 5</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/pucing_tutup.png" alt="Pucing" />
+        <p>Karakter 6</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/rucing_tutup.png" alt="Rucing" />
+        <p>Karakter 7</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/tucing_tutup.png" alt="Tucing" />
+        <p>Karakter 8</p>
+        <button>Equip</button>
+      </div>
+      <div class="character">
+        <img src="./image/urang_tutup.png" alt="Urang" />
+        <p>Karakter 9</p>
+        <button>Equip</button>
+      </div>
+    </section>
+  </body>
+</html>
